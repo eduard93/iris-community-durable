@@ -9,4 +9,5 @@ USER root
 #RUN chown irisowner:irisowner /iris/
 #USER ${ISC_PACKAGE_MGRUSER}
 
-CMD mkdir -p /iris/durable && chown irisowner:irisowner /iris/durable && runuser -u irisowner iris
+#CMD mkdir -p /iris/durable && chown irisowner:irisowner /iris/durable && runuser -u irisowner iris
+CMD ["sh", "-c", "tail -f /dev/null"]
